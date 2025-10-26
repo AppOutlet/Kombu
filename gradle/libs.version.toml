@@ -1,0 +1,113 @@
+[versions]
+agp = "8.13.0"
+android-compileSdk = "36"
+android-minSdk = "28"
+android-targetSdk = "36"
+androidx-activityCompose = "1.11.0"
+adaptive = "1.1.2"
+bouncyCastle = "1.82"
+coil = "3.3.0"
+coroutines = "1.10.2"
+compose-plugin = "1.9.0"
+compose-hotReload = "1.0.0-rc02"
+cryptography = "0.5.0"
+detekt = "1.23.8"
+lifecycle = "2.9.4"
+richTextEditor = "1.0.0-rc13"
+kermit = "2.0.8"
+kotest = "6.0.4"
+kotlin = "2.2.20"
+koin = "4.1.1"
+koin-annotations = "2.2.0"
+ktor = "3.3.1"
+revenuecat = "2.2.2+17.10.0"
+sentry = "0.19.0"
+sqldelight = "2.1.0"
+supabase = "3.2.5"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+buildKonfig = "com.codingfeline.buildkonfig:0.17.1"
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+gitHooks = "eu.bambooapps.gradle.plugin.githook:1.1.1"
+compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
+compose-hotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hotReload" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kover = "org.jetbrains.kotlinx.kover:0.9.2"
+ksp = "com.google.devtools.ksp:2.2.20-2.0.4"
+mokkery = "dev.mokkery:2.10.1"
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+sentry = { id = "io.sentry.kotlin.multiplatform.gradle", version.ref = "sentry" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+
+[libraries]
+appdirs = "ca.gosyer:kotlin-multiplatform-appdirs:2.0.0"
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+bouncycastle-bcprov = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncyCastle" }
+bouncycastle-bcpkix = { module = "org.bouncycastle:bcpkix-jdk18on", version.ref = "bouncyCastle" }
+coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-gif = { module = "io.coil-kt.coil3:coil-gif", version.ref = "coil" }
+coil-svg = { module = "io.coil-kt.coil3:coil-svg", version.ref = "coil" }
+coil-network-ktor3 = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil" }
+cryptography-core = { module = "dev.whyoleg.cryptography:cryptography-core", version.ref = "cryptography" }
+cryptography-provider-apple = { module = "dev.whyoleg.cryptography:cryptography-provider-apple", version.ref = "cryptography" }
+cryptography-provider-jdk = { module = "dev.whyoleg.cryptography:cryptography-provider-jdk", version.ref = "cryptography" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detekt-composeRules = "io.nlopez.compose.rules:detekt:0.4.27"
+fixture = "com.appmattus.fixture:fixture:1.2.0"
+kermit-core = { module = "co.touchlab:kermit", version.ref = "kermit" }
+kermit-koin = { module = "co.touchlab:kermit-koin", version.ref = "kermit" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotlin-datetime = "org.jetbrains.kotlinx:kotlinx-datetime:0.7.1-0.6.x-compat"
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+lifecycle-viewModel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+logback = "ch.qos.logback:logback-classic:1.5.19"
+materialKolor = "com.materialkolor:material-kolor:2.1.1"
+material3-adaptive-core = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
+material3-adaptive-layout = { module = "org.jetbrains.compose.material3.adaptive:adaptive-layout", version.ref = "adaptive" }
+material3-adaptive-navigation = { module = "org.jetbrains.compose.material3.adaptive:adaptive-navigation", version.ref = "adaptive" }
+mockk = "io.mockk:mockk:1.14.6"
+
+navigation = "org.jetbrains.androidx.navigation:navigation-compose:2.9.0"
+serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0"
+koin-core = { module = "io.insert-koin:koin-compose-viewmodel-navigation", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+koin-kspCompiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations" }
+kottie = "io.github.ismai117:kottie:2.1.0"
+ksoup = "com.fleeksoft.ksoup:ksoup:0.2.5"
+revenuecat-purchases-core = { module = "com.revenuecat.purchases:purchases-kmp-core", version.ref = "revenuecat" }
+revenuecat-purchases-ui = { module = "com.revenuecat.purchases:purchases-kmp-ui", version.ref = "revenuecat" }
+richTextEditor = { module = "com.mohamedrejeb.richeditor:richeditor-compose", version.ref = "richTextEditor" }
+richTextEditorCoil3 = { module = "com.mohamedrejeb.richeditor:richeditor-compose-coil3", version.ref = "richTextEditor" }
+sentry = { module = "io.sentry:sentry-kotlin-multiplatform", version.ref = "sentry" }
+slf4j = "org.slf4j:slf4j-android:1.7.36"
+sqldelight-primitiveAdapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "sqldelight" }
+sqldelight-coroutinesExtensions = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelight-desktopDriver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+supabase-auth = { module = "io.github.jan-tennert.supabase:auth-kt", version.ref = "supabase" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-resources = { module = "io.ktor:ktor-client-resources", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
+ktor-serialization-kotlinxJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+umami = "dev.appoutlet:umami:0.1.12"
+webview = "io.github.kevinnzou:compose-webview-multiplatform:2.0.3"
+
+[bundles]
+bouncycastle = ["bouncycastle-bcprov", "bouncycastle-bcpkix"]
