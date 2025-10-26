@@ -55,7 +55,7 @@ kotlin {
 }
 
 android {
-    namespace = "dev.appoutlet.kombu"
+    namespace = "dev.appoutlet.kombu.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     packaging {
