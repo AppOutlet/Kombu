@@ -23,5 +23,5 @@ plugins {
 }
 
 include(":android")
-include(":kombu-desktop")
+include(":desktop")
 include(":kombu-shared")
