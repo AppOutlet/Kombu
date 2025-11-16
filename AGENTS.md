@@ -174,29 +174,53 @@ fun main() = application {
 
 ---
 
-### 4. `kombu-ios` (iOS Application)
+### 4. `ios` (iOS Application)
 
-**Purpose**: iOS native application wrapper.
+**Purpose**: iOS native application wrapper using SwiftUI.
 
 **Structure**:
 ```
-kombu-ios/
+ios/
 ├── Kombu/
-│   ├── iOSApp.swift            # SwiftUI app entry
+│   ├── iOSApp.swift            # SwiftUI app entry point
 │   ├── ContentView.swift       # View bridging to Compose
+│   ├── Info.plist              # iOS app configuration
 │   ├── Assets.xcassets/        # App icons and assets
-│   ├── Preview Content/
-│   └── Info.plist
+│   │   ├── AppIcon.appiconset/ # Application icons
+│   │   │   ├── app-icon-1024.png
+│   │   │   └── Contents.json
+│   │   ├── AccentColor.colorset/
+│   │   └── Contents.json
+│   └── Preview Content/
+│       └── Preview Assets.xcassets/
 ├── Configuration/
-│   └── Config.xcconfig
-└── Kombu.xcodeproj/
+│   └── Config.xcconfig         # Build configuration
+└── Kombu.xcodeproj/            # Xcode project files
+    ├── project.pbxproj
+    ├── project.xcworkspace/
+    └── xcshareddata/
+        └── xcschemes/
+            └── Kombu.xcscheme
 ```
 
 **Key Features**:
-- SwiftUI app with `UIViewControllerRepresentable` bridge
-- Imports `KombuShared` framework
-- Calls `MainViewController()` from shared Kotlin code
-- Standard iOS project structure with Xcode project files
+- **SwiftUI Application**: Modern SwiftUI-based iOS app using `@main` entry point
+- **Compose Integration**: Uses `UIViewControllerRepresentable` to bridge SwiftUI with Compose Multiplatform
+- **Framework Import**: Imports `KombuShared` framework (static library from Kotlin Multiplatform)
+- **Ignore Safe Area**: Full-screen Compose UI with `.ignoresSafeArea()` modifier
+- **Performance Optimization**: `CADisableMinimumFrameDurationOnPhone` enabled for better frame rates
+
+**Application Entry** (`iOSApp.swift`):
+```swift
+@main
+struct iOSApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
+```
 
 **Bridge Implementation** (`ContentView.swift`):
 ```swift
@@ -204,8 +228,23 @@ struct ComposeView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         MainViewControllerKt.MainViewController()
     }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+}
+
+struct ContentView: View {
+    var body: some View {
+        ComposeView()
+            .ignoresSafeArea()
+    }
 }
 ```
+
+**Build Configuration** (`Config.xcconfig`):
+- **Product Name**: Kombu
+- **Bundle Identifier**: `dev.appoutlet.Kombu{TEAM_ID}`
+- **Version**: 1.0 (Build 1)
+- **Team ID**: Configured per developer (empty by default)
 
 ---
 
@@ -329,7 +368,7 @@ expect fun getPlatform(): Platform
 Kombu/
 ├── android/                    # Android app module
 ├── desktop/                    # Desktop (JVM) app module
-├── kombu-ios/                  # iOS app with Xcode project
+├── ios/                  # iOS app with Xcode project
 ├── kombu-shared/               # Shared Kotlin Multiplatform module
 ├── gradle/                     # Gradle wrapper and version catalogs
 ├── kotlin-js-store/            # JS/WASM artifacts
@@ -491,7 +530,7 @@ Based on the early-stage warning in README, the following are likely planned:
    - Native API integrations
    - Platform-specific UI adjustments
 
-3. **Application Layer** (`android`, `desktop`, `kombu-ios`):
+3. **Application Layer** (`android`, `ios`, `desktop`):
    - Platform app configuration
    - Entry points
    - Platform-specific dependencies
@@ -565,6 +604,6 @@ The application serves dual purposes: as a functional analytics dashboard for Um
 
 ---
 
-**Last Updated**: Based on project analysis as of 2025-11-16
+**Last Updated**: 2025-11-16 (iOS app information updated)
 **Project Status**: 👷‍♀️ Early Development Stage
 **Maintainer**: [AppOutlet](https://appoutlet.dev)

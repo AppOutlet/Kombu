@@ -7,25 +7,12 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		9C2EC712C77722EA02885514 /* Kombu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kombu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2EC712C77722EA02885514 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		13141F6E12370AB6F83B294E /* Exceptions for "Kombu" folder in "Kombu" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = AAAAEA5448F88BE81B0F66DE /* Kombu */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		21B77910D038B9312DE9B74B /* Kombu */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				13141F6E12370AB6F83B294E /* Exceptions for "Kombu" folder in "Kombu" target */,
-			);
 			path = Kombu;
 			sourceTree = "<group>";
 		};
@@ -59,7 +46,7 @@
 		6EDB5E84662F02BA28A53F2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C2EC712C77722EA02885514 /* Kombu.app */,
+				9C2EC712C77722EA02885514 /* .app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +74,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = 9C2EC712C77722EA02885514 /* Kombu.app */;
+			productReference = 9C2EC712C77722EA02885514 /* .app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
