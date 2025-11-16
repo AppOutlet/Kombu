@@ -7,31 +7,6 @@ plugins {
     alias(libs.plugins.compose.hotReload)
 }
 
-//kotlin {
-//    jvm()
-//
-//    sourceSets {
-//        commonMain.dependencies {
-//            implementation(project(":sample:kombu:kombu-shared") )
-//            implementation(compose.runtime)
-//            implementation(compose.foundation)
-//            implementation(compose.material3)
-//            implementation(compose.ui)
-//            implementation(compose.components.resources)
-//            implementation(compose.components.uiToolingPreview)
-//            implementation(libs.lifecycle.viewModel)
-//            implementation(libs.lifecycle.runtimeCompose)
-//        }
-//        commonTest.dependencies {
-//            implementation(libs.kotlin.test)
-//        }
-//        jvmMain.dependencies {
-//            implementation(compose.desktop.currentOs)
-//            implementation(libs.coroutines.swing)
-//        }
-//    }
-//}
-
 dependencies {
     implementation(project(":kombu-shared"))
     implementation(compose.desktop.currentOs)
