@@ -140,13 +140,13 @@ android/
 
 ---
 
-### 3. `kombu-desktop` (Desktop Application Module)
+### 3. `desktop` (Desktop Application Module)
 
 **Purpose**: Desktop (Windows, macOS, Linux) application using JVM.
 
 **Structure**:
 ```
-kombu-desktop/
+desktop/
 ├── src/
 │   └── main/
 │       └── kotlin/dev/appoutlet/kombu/
@@ -328,7 +328,7 @@ expect fun getPlatform(): Platform
 ```
 Kombu/
 ├── android/                    # Android app module
-├── kombu-desktop/              # Desktop (JVM) app module
+├── desktop/                    # Desktop (JVM) app module
 ├── kombu-ios/                  # iOS app with Xcode project
 ├── kombu-shared/               # Shared Kotlin Multiplatform module
 ├── gradle/                     # Gradle wrapper and version catalogs
@@ -465,7 +465,7 @@ Based on the early-stage warning in README, the following are likely planned:
 ./gradlew :android:installDebug
 
 # Run Desktop
-./gradlew :kombu-desktop:run
+./gradlew :desktop:run
 
 # Build iOS framework
 ./gradlew :kombu-shared:linkDebugFrameworkIosSimulatorArm64
@@ -491,7 +491,7 @@ Based on the early-stage warning in README, the following are likely planned:
    - Native API integrations
    - Platform-specific UI adjustments
 
-3. **Application Layer** (`android`, `kombu-desktop`, `kombu-ios`):
+3. **Application Layer** (`android`, `desktop`, `kombu-ios`):
    - Platform app configuration
    - Entry points
    - Platform-specific dependencies
