@@ -1,4 +1,4 @@
-rootProject.name = "Kombu"
+rootProject.name = "Kombu-App"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -24,4 +24,4 @@ plugins {
 
 include(":android")
 include(":desktop")
-include(":kombu-shared")
+include(":kombu")

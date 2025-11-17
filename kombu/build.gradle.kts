@@ -20,7 +20,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
-            baseName = "KombuShared"
+            baseName = "Kombu"
             isStatic = true
         }
     }
@@ -52,7 +52,7 @@ kotlin {
 }
 
 android {
-    namespace = "dev.appoutlet.kombu.shared"
+    namespace = "dev.appoutlet.kombu"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     packaging {
