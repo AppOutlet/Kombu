@@ -10,7 +10,7 @@
 
 ## Project Overview
 
-**Kombu** is a modern, cross-platform analytics dashboard built with Kotlin Multiplatform (KMP), designed to provide an alternative frontend interface for Umami Analytics. The application showcases privacy-friendly analytics across multiple platforms while demonstrating best practices in cross-platform development.
+**Kombu-App** is a modern, cross-platform analytics dashboard built with Kotlin Multiplatform (KMP), designed to provide an alternative frontend interface for Umami Analytics. The application showcases privacy-friendly analytics across multiple platforms while demonstrating best practices in cross-platform development.
 
 - **Developer**: [AppOutlet](https://appoutlet.dev)
 - **Status**: Early development stage (work in progress)

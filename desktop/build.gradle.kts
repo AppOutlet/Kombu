@@ -8,7 +8,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":kombu-shared"))
+    implementation(project(":kombu"))
     implementation(compose.desktop.currentOs)
 }
 

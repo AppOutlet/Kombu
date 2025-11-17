@@ -37,6 +37,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":kombu-shared"))
+    implementation(project(":kombu"))
     implementation(libs.activity.compose)
 }
